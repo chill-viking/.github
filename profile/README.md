@@ -1,5 +1,9 @@
 ## Hi there, welcome to `chill-viking` 👋
 
+<p align="center">
+  <img src="https://chillviking.com/assets/chill-viking-720-logo.png" alt="chill-viking logo"/>
+</p>
+
 <!--
 // todo: add social links if every create a social media presence.
 -->
