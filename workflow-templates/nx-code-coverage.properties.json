@@ -4,8 +4,5 @@
   "iconName": "icon-dragon",
   "categories": [
     "typescript"
-  ],
-  "filePatterns": [
-    "nx.json$"
   ]
 }

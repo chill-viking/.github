@@ -4,8 +4,5 @@
   "iconName": "icon-hammer",
   "categories": [
     "typescript"
-  ],
-  "filePatterns": [
-    "nx.json$"
   ]
 }
