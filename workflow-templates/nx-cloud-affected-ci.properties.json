@@ -1,7 +1,7 @@
 {
   "name": "ChillViking NX affected CI",
   "description": "CI workflow for NX using nx-cloud",
-  "iconName": "hammer",
+  "iconName": "icon-hammer",
   "categories": [
     "typescript"
   ],
