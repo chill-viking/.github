@@ -1,5 +1,5 @@
 {
-  "name": "ChillViking release workflow",
+  "name": "chill-viking-release",
   "description": "Workflow for creating releases",
-  "iconName": "icon-viking-ship"
+  "iconName": "icons/icon-viking-ship"
 }
