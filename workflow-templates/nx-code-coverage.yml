@@ -1,0 +1,66 @@
+name: nx-code-coverage
+on:
+  push:
+    branches: [ $default-branch ]
+    paths:
+      - /** # specify path
+  pull_request:
+    branches: [ $default-branch ]
+    types: [ opened, synchronize, reopened ]
+    paths:
+      - /** # specify path
+
+env:
+  SONAR_ORG: 'chill-viking-org'
+  SONAR_PROJECT: 'chill-viking_'                        # update with sonar project
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  COVERAGE_LOCATION: 'coverage/**/lcov.info'
+  CONFIG_LOCATION: '**/tsconfig.app.json'
+  WORKING_DIRECTORY: '.'
+  NX_PROJECT: 'project'                                 # set project name
+
+jobs:
+  main:
+    name: test and publish coverage
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: nrwl/nx-set-shas@v3
+      - name: Cache node modules
+        id: cache-nodemodules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          # caching node_modules
+          path: ${{ env.WORKING_DIRECTORY }}/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install Dependencies
+        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - run: npx nx run ${{ env.NX_PROJECT }}:test --parallel=3 --ci --code-coverage
+      - run: npx nx run ${{ env.NX_PROJECT }}:build --parallel=3
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: swa-sandbox-ui
+          args: >
+            -Dsonar.organization=${{ env.SONAR_ORG }}
+            -Dsonar.projectKey=${{ env.SONAR_PROJECT }}
+            -Dsonar.javascript.lcov.reportPaths=${{ env.COVERAGE_LOCATION }}
+            -Dsonar.typescript.tsconfigPaths=${{ env.CONFIG_LOCATION }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
