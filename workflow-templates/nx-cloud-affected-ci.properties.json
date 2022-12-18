@@ -1,5 +1,5 @@
 {
-  "name": "NX affected CI",
+  "name": "[chill-viking] NX affected CI",
   "description": "CI workflow for NX mono-repo using nx-cloud",
   "iconName": "icon-hammer",
   "categories": [

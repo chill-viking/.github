@@ -1,5 +1,5 @@
 {
-  "name": "NX SonarCloud Coverage",
+  "name": "[chill-viking] NX SonarCloud Coverage",
   "description": "CI workflow for publishing code coverage of NX project to sonar cloud",
   "iconName": "icon-dragon",
   "categories": [
