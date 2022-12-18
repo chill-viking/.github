@@ -1,32 +1,30 @@
-name: nx-code-coverage
+name: publish-code-coverage
 on:
   push:
-    branches: [ $default-branch ]
-    paths:
-      - /** # specify path
+    branches: [main]
   pull_request:
-    branches: [ $default-branch ]
-    types: [ opened, synchronize, reopened ]
-    paths:
-      - /** # specify path
+    branches: [main]
+    types: [opened, synchronize, reopened]
 
 env:
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}         # set to stored token
   SONAR_ORG: 'chill-viking-org'
-  SONAR_PROJECT: 'chill-viking_'                        # update with sonar project
-  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  COVERAGE_LOCATION: 'coverage/**/lcov.info'
-  CONFIG_LOCATION: '**/tsconfig.app.json'
-  WORKING_DIRECTORY: '.'
-  NX_PROJECT: 'project'                                 # set project name
+  SONAR_PROJECT: 'chill-viking-org_'              # set to project key
+  COVERAGE_LOCATION: 'coverage/lcov.info'         # set to coverage location
+  CONFIG_LOCATION: 'tsconfig.app.json'            # set to tsconfig
+  NX_PROJECT: ''                                  # set to nx project
+  PROJECT_BASE: 'apps/chill-viking-ng-libs'       # set to folder of app
 
 jobs:
   main:
-    name: test and publish coverage
+    name: test, build, and publish
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ env.WORKING_DIRECTORY }}
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -38,7 +36,7 @@ jobs:
           cache-name: cache-node-modules
         with:
           # caching node_modules
-          path: ${{ env.WORKING_DIRECTORY }}/node_modules
+          path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -50,17 +48,26 @@ jobs:
         run: npm ci
 
       - run: npx nx run ${{ env.NX_PROJECT }}:test --parallel=3 --ci --code-coverage
+        name: Test chill-viking-ng-libs
       - run: npx nx run ${{ env.NX_PROJECT }}:build --parallel=3
+        name: Build chill-viking-ng-libs
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+        with:
+          path: ${{ env.PROJECT_BASE }}
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
-          projectBaseDir: swa-sandbox-ui
+          projectBaseDir: ${{ env.PROJECT_BASE }}
           args: >
             -Dsonar.organization=${{ env.SONAR_ORG }}
             -Dsonar.projectKey=${{ env.SONAR_PROJECT }}
             -Dsonar.javascript.lcov.reportPaths=${{ env.COVERAGE_LOCATION }}
             -Dsonar.typescript.tsconfigPaths=${{ env.CONFIG_LOCATION }}
+            -Dsonar.projectVersion=${{ steps.package-version.outputs.current-version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ env.SONAR_TOKEN }}

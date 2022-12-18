@@ -1,6 +1,6 @@
 {
-  "name": "ChillViking NX affected CI",
-  "description": "CI workflow for NX using nx-cloud",
+  "name": "NX affected CI",
+  "description": "CI workflow for NX mono-repo using nx-cloud",
   "iconName": "icon-hammer",
   "categories": [
     "typescript"
