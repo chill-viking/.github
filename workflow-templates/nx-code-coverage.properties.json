@@ -1,7 +1,7 @@
 {
-  "name": "chill-viking-nx-sonar",
+  "name": "ChillViking publish NX to SonarCloud",
   "description": "CI workflow for publishing NX project to sonar cloud",
-  "iconName": "icons/icon-dragon",
+  "iconName": "icon-dragon",
   "categories": [
     "typescript"
   ]

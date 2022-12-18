@@ -1,7 +1,7 @@
 {
-  "name": "chill-viking-nx-cloud",
-  "description": "CI workflow for NX using nx-cloud to lint and test",
-  "iconName": "icons/icon-hammer",
+  "name": "ChillViking NX affected CI",
+  "description": "CI workflow for NX using nx-cloud",
+  "iconName": "icon-hammer",
   "categories": [
     "typescript"
   ]
