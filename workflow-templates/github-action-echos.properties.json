@@ -1,0 +1,8 @@
+{
+  "name": "[chill-viking] Echo Contexts",
+  "description": "CI workflow to echo available contexts",
+  "iconName": "icon-hammer",
+  "categories": [
+    "debugging"
+  ]
+}
