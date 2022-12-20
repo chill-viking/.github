@@ -1,0 +1,8 @@
+{
+  "name": "[chill-viking] Stale",
+  "description": "Workflow to remove stale issues and pull requests",
+  "iconName": "icon-hammer",
+  "categories": [
+    "typescript"
+  ]
+}
