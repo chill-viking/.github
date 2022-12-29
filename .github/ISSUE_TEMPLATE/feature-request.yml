@@ -1,5 +1,5 @@
-name: 💡 Feature
-description: File a bug report
+name: 💡 Feature Request
+description: Suggest a new idea for the project
 title: "feat([SCOPE]): [TITLE]"
 labels: ["enhancement", "discuss"]
 body:
