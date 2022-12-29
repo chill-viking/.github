@@ -4,6 +4,6 @@ issue_template:
   - "bug-report.yml"
   - "security-report.yml"
 contact_links:
-  - name: Chill Viking Discussions
+  - name: "🎊 Chill Viking Discussions"
     url: https://github.com/orgs/chill-viking/discussions
     about: Please ask and answer questions here.
