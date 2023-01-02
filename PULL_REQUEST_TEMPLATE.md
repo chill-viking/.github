@@ -24,11 +24,13 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] Test A
 - [ ] Test B
 
+<!-- remove comments if using a specific test configuration
 **Test Configuration**:
 * Firmware version:
 * Hardware:
 * Toolchain:
 * SDK:
+-->
 
 ## 🧾 Checklist:
 
