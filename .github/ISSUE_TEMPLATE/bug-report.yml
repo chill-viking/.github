@@ -1,7 +1,7 @@
 name: 🐛 Bug Report
 description: File a bug/issue
 title: "fix([SCOPE]): [TITLE]"
-labels: ["bug", "triage"]
+labels: ["bug :bug:", "triage"]
 body:
   - type: markdown
     attributes:

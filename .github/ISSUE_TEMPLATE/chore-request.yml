@@ -1,7 +1,7 @@
 name: 🧹 Chore Request
 description: File a non-functional change request
 title: "chore([SCOPE]): [TITLE]"
-labels: ["documentation", "non-functional improvement"]
+labels: ["documentation :writing_hand:", "non-functional improvement :tada:"]
 body:
   - type: markdown
     attributes:

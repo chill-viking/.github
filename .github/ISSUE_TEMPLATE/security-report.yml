@@ -1,7 +1,7 @@
 name: 🔒 Security Report
 description: Report a security issue
 title: "fix(SCOPE): [TITLE]"
-labels: ["bug", "security flaw", "triage"]
+labels: ["bug :bug:", "security flaw :space_invader:", "triage"]
 body:
   - type: markdown
     attributes:

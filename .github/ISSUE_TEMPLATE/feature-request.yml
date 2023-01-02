@@ -1,7 +1,7 @@
 name: 💡 Feature Request
 description: Suggest a new idea for the project
 title: "feat([SCOPE]): [TITLE]"
-labels: ["enhancement", "discuss"]
+labels: ["enhancement :bulb:", "discuss :speaking_head:"]
 body:
   - type: markdown
     attributes:
