@@ -1,6 +1,6 @@
 blank_issues_enabled: true
 issue_template:
-  = "chore-request.yml"
+  - "chore-request.yml"
   - "feature-request.yml"
   - "bug-report.yml"
   - "security-report.yml"
