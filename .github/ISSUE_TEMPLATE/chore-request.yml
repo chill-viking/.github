@@ -1,7 +1,7 @@
 name: 🧹 Chore Request
 description: File a non-functional change request
 title: "chore([SCOPE]): [TITLE]"
-labels: ["documentation"]
+labels: ["documentation", "non-functional improvement"]
 body:
   - type: markdown
     attributes:
@@ -20,7 +20,7 @@ body:
     validations:
       required: true
 
-  - type: text-area
+  - type: textarea
     id: sample-of-change
     attributes:
       label: Sample of Change

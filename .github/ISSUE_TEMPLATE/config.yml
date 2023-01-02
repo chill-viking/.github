@@ -1,9 +1,9 @@
 blank_issues_enabled: true
 issue_template:
-  - "chore-request.yml"
   - "feature-request.yml"
   - "bug-report.yml"
   - "security-report.yml"
+  - "chore-request.yml"
 contact_links:
   - name: "🎊 Chill Viking Discussions"
     url: https://github.com/orgs/chill-viking/discussions
