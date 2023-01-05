@@ -19,7 +19,7 @@
   ],
   "configMigration": true,
   "dependencyDashboardTitle": "chore(deps): dependency dashboard",
-  "dependencyDashboardLabels": ["dependencies :scroll:"],
+  "dependencyDashboardLabels": ["dependencies :scroll:", "auto :robot:"],
   "automerge": true,
   "platformAutomerge": true,
   "automergeStrategy": "rebase"
