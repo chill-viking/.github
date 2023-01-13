@@ -19,6 +19,8 @@ Peter started this journey purely as a means to code more, test out designs stuc
 ## `chill-viking` primary objective
 
 1. Create stuff that people like to use and have fun on the adventure
+2. Don't be a doos, be lekker 😉
+
 
 <!--
 
