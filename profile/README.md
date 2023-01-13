@@ -8,8 +8,6 @@
 // todo: add social links if every create a social media presence.
 -->
 
-## Glad you could drop by [![HitCount](https://hits.dwyl.com/chill-viking/github.svg?style=flat-square&show=unique)](http://hits.dwyl.com/chill-viking/github)
-
 This is an org started and maintained by [Peter Jokumsen](https://github.com/peterjokumsen).
 
 [![Peter's GitHub stats](https://stats.chillviking.dev/api?username=peterjokumsen&show_icons=true&theme=dracula)](https://github.com/anuraghazra/github-readme-stats)
@@ -21,19 +19,7 @@ Peter started this journey purely as a means to code more, test out designs stuc
 1. Create stuff that people like to use and have fun on the adventure
 2. Don't be a doos, be lekker 😉
 
-## `chill-viking` repositories
-
-<a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" src="https://stats.chillviking.dev/api/pin/?username=chill-viking&repo=dotnet-sonar-scanner&theme=dracula" />
-</a>
-
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" src="https://stats.chillviking.dev/api/pin/?username=chill-viking&repo=ng-libs&theme=dracula" />
-</a>
-
-<a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" src="https://stats.chillviking.dev/api/pin/?username=chill-viking&repo=testing-libs&theme=dracula" />
-</a>
+Hits: [![HitCount](https://hits.dwyl.com/chill-viking/github.svg?style=flat-square&show=unique)](http://hits.dwyl.com/chill-viking/github)
 
 <!--
 
