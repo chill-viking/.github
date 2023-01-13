@@ -21,6 +21,19 @@ Peter started this journey purely as a means to code more, test out designs stuc
 1. Create stuff that people like to use and have fun on the adventure
 2. Don't be a doos, be lekker 😉
 
+## `chill-viking` repositories
+
+<a href="https://github.com/anuraghazra/convoychat">
+  <img align="center" src="https://stats.chillviking.dev/api/pin/?username=chill-viking&repo=dotnet-sonar-scanner&theme=dracula" />
+</a>
+
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" src="https://stats.chillviking.dev/api/pin/?username=chill-viking&repo=ng-libs&theme=dracula" />
+</a>
+
+<a href="https://github.com/anuraghazra/convoychat">
+  <img align="center" src="https://stats.chillviking.dev/api/pin/?username=chill-viking&repo=testing-libs&theme=dracula" />
+</a>
 
 <!--
 
