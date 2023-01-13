@@ -12,7 +12,7 @@
 
 This is an org started and maintained by [Peter Jokumsen](https://github.com/peterjokumsen).
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=peterjokumsen&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
+[![Peter's GitHub stats](https://stats.chillviking.dev/api?username=peterjokumsen&show_icons=true&theme=dracula)](https://github.com/anuraghazra/github-readme-stats)
 
 Peter started this journey purely as a means to code more, test out designs stuck in his head, hopefully help others, and **hopefully** find a way to make some passive income.
 
